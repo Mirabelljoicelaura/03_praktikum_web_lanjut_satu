@@ -62,19 +62,17 @@
 
 </div>
 
+
+
 <div class="about-container-2 margin-bottom-50">
+    @foreach ($home as $data)
   <div class="about-container-inner">
-    <h3 class="about-title-2">Two Columns</h3>
-    <img src="img/about/3.jpg" alt="Image" class="img-responsive margin-bottom-15">
-    <p class="about-description">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+    <h3 class="about-title-2">{{$data->title}}</h3>
+    <img src="{{$data->image}}" alt="Image" class="img-responsive margin-bottom-15" style="width: 300px; height : 200px;">
+    <p class="about-description">{{$data->content}}</p>
     <a href="#" class="about-link about-link-2">Details</a>
   </div>
-  <div class="about-container-inner">
-    <h3 class="about-title-2">Two Columns</h3>
-    <img src="img/about/4.jpg" alt="Image" class="img-responsive margin-bottom-15">
-    <p class="about-description">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-    <a href="#" class="about-link about-link-2">Details</a>
-  </div>
+  @endforeach
 </div>
 
 <div class="about-container-2">
